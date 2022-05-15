@@ -1,0 +1,168 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@500;700;900&display=swap');
+
+/* -----------------------------------\\*utility//-------------------------------------------------------------------------------------------------- */
+/* -----------------------------------\\*utility//-------------------------------------------------------------------------------------------------- */
+/* -----------------------------------\\*utility//-------------------------------------------------------------------------------------------------- */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --heading: #9932CC;
+    --para: #777;
+    --navcolor: #474747;
+    --para-tint: #f1f1f1;
+    --white: #fff;
+    --helper: #a98de2;
+    --helper-tint: #c9b8ed;
+    --bg: rgb(249, 249, 255);
+    --gradient: linear-gradient(0deg, rgb(186,85,211) 0%, rgb(238,130,238) 100%);
+    --gradientSupport: -webkit-linear-gradient(0deg, rgb(186,85,211) 0%, rgb(238,130,238) 100%);
+    --shadow: 0px, 0px, 20px, 0px rgb(132 144 255/ 20%);
+
+}
+
+html{
+    font-size: 62.5%;
+}
+
+h1,h2,h3,h4,h5{
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    color: var(--heading);
+    font-size: 6rem;
+    font-weight: 600;
+}
+
+h3{
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+p{
+    color: var(--para);
+    font-size: 1.7rem;
+    line-height: 1.6;
+}
+
+a{
+text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+
+
+/* -----------------------------------\\*Navbar//-------------------------------------------------------------------------------------------------- */
+/* -----------------------------------\\*Navbar//-------------------------------------------------------------------------------------------------- */
+/* -----------------------------------\\*Navbar//-------------------------------------------------------------------------------------------------- */
+
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bg);
+    height: 8vh;
+    padding: 0 10rem;
+}
+
+.header img{
+    height: 3.2rem;
+}
+
+.navbar-lists{
+
+    display: flex;
+    gap: 4rem;
+}
+
+.navbar-link:link, 
+.navbar-link:visited{
+
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--navcolor);
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.3s linear;
+    
+}
+
+.navbar-link:hover, 
+.navbar-link:active{
+    
+    color: #bbbbbb;
+    
+
+    
+}
+
+/* -----------------------------------\\*Main//-------------------------------------------------------------------------------------------------- */
+/* -----------------------------------\\*Main//-------------------------------------------------------------------------------------------------- */
+/* -----------------------------------\\*Main//-------------------------------------------------------------------------------------------------- */
+
+.main{
+
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+    
+}
+
+.main-section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 140rem;
+    margin: 0 auto;
+    padding: 3rem 5rem;
+    
+}
+
+.main-left{
+    
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+   height: 50vh;
+    flex-direction: column;
+}
+
+.main-image{
+    height: 70%;
+}
+
+.main-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+
+/* utility......................................................................................... */
+
+.button{
+
+   background-image: var(--gradient);
+    font-size: 1.8rem;
+    padding: 1rem 1.2rem;
+    margin-top: 4rem;
+    border: none;
+    display: inline-block;
+    color: var(--gradientSupport);
+    text-transform: uppercase;
+
+
+}
+
+
+
