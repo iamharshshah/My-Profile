@@ -13,17 +13,19 @@
 }
 
 :root{
-    --heading: #9932CC;
+    --heading: #b667dd;
     --para: #777;
     --navcolor: #474747;
     --para-tint: #f1f1f1;
     --white: #fff;
-    --helper: #a98de2;
-    --helper-tint: #c9b8ed;
+    --helper: #bd8bfd;
+    --helper-tint: #f0ebfc;
     --bg: rgb(249, 249, 255);
-    --gradient: linear-gradient(0deg, rgb(186,85,211) 0%, rgb(238,130,238) 100%);
-    --gradientSupport: -webkit-linear-gradient(0deg, rgb(186,85,211) 0%, rgb(238,130,238) 100%);
+    --gradient: linear-gradient(0deg, rgb(226, 110, 255) 0%, rgb(174, 112, 255) 100%);
+    --gradientSupport: linear-gradient(0deg, rgb(225, 127, 250) 0%, rgb(238,130,238) 100%);
     --shadow: 0px, 0px, 20px, 0px rgb(132 144 255/ 20%);
+
+    --suportShadow: 0px, 100px, 20px, 0px rgb(132 144 255/ 30%);
 
 }
 
@@ -77,7 +79,7 @@ li{
 }
 
 .header img{
-    height: 3.2rem;
+    height: 4rem;
 }
 
 .navbar-lists{
@@ -112,57 +114,300 @@ li{
 /* -----------------------------------\\*Main//-------------------------------------------------------------------------------------------------- */
 /* -----------------------------------\\*Main//-------------------------------------------------------------------------------------------------- */
 
-.main{
+main{
+    background-color: var(--bg);
 
-    margin-top: 10rem;
-    margin-bottom: 2rem;
-    
 }
+.grid{
+    gap: 8rem;
+    display: grid;
+}
+
 
 .main-section{
-    display: grid;
+    margin: 10rem 0rem;
     grid-template-columns: repeat(2, 1fr);
-    max-width: 140rem;
-    margin: 0 auto;
-    padding: 3rem 5rem;
-    
-}
+   
 
+ 
+}
+.container{
+    max-width: 120rem;
+    margin: 0 auto;
+    height: 60vh;
+}
+ 
 .main-left{
-    
     display: flex;
-    align-items: flex-start;
     justify-content: center;
-   height: 50vh;
     flex-direction: column;
 }
 
 .main-image{
-    height: 70%;
+    
+   max-width: 70%;
+    display: inline-block;
 }
 
 .main-right{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50vh;
+    flex-direction: column;
+} 
+
+.main-top-para{
+    color: var(--helper);
+    font-weight: 500;
+    font-size: 2rem;
+    text-transform: uppercase;
+    
+}
+
+.main-bottom-para{
+    font-weight: 500;
+    margin: 5rem 0;
+    
+    
+}
+
+.main-header{
+
+    font-weight: 700;
+    text-transform: uppercase;
+    color: black;
+    font-size: 7rem;
 }
 
 /* utility......................................................................................... */
+/* utility......................................................................................... */
 
-.button{
+.button:link,
+.button:visited{
 
    background-image: var(--gradient);
-    font-size: 1.8rem;
-    padding: 1rem 1.2rem;
-    margin-top: 4rem;
+    font-size: 2rem;
+    padding: 1.4rem 3.2rem;
+    cursor: pointer;
     border: none;
     display: inline-block;
-    color: var(--gradientSupport);
+    color: var(--helper-tint);
     text-transform: uppercase;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
 
 
 }
 
+.button:hover,
+.button:active {
 
+    box-shadow: 0px 20px 20px 0px rgb(132 144 255/ 30%);
+
+}
+
+/* Biodata......................................................................................... */
+/* Biodata......................................................................................... */
+
+.grid{
+    gap: 8rem;
+    display: grid;
+}
+
+/* .container{
+    max-width: 160rem;
+    margin: 0 auto;
+} */
+
+.biodata{
+
+    grid-template-columns: repeat(2,1fr);
+    gap: 9rem;
+    max-width: 160rem;
+    margin: 9rem auto;
+}
+
+
+.biodata-image{
+box-shadow: -2rem -2rem var(--helper);
+display: inline-block;
+
+}
+
+
+
+.biodata-left{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+/* design for the header ............................*/
+.biodata-header{
+    font-weight: 600;
+    font-size: 6rem;
+    padding: 3rem 0;
+    position: relative;
+}
+
+
+
+.biodata-header::before{
+content: ""; 
+/* it is very neccesary that give content */
+top: 12rem;
+left: 0;
+background: var(--helper);
+border-radius: 50%;
+width: 3rem;
+height: 3rem;
+position: absolute;
+
+}
+
+.biodata-header::after{
+    content: ""; 
+    /* it is very neccesary that give content */
+    top: 13.1rem;
+    left: 1rem;
+    background: var(--helper);
+    width: 28rem;
+    height: 0.6rem;
+    position: absolute;
+    
+    }
+/* design for the header end here............................*/
+    
+
+.biodata-para{
+    
+    font-weight: 500;
+    margin: 5rem 0;
+    
+}
+
+/* design for the progress bar............................*/
+
+.progress-bar{
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    gap: 5rem;
+    padding: 6rem 0;
+    
+}
+
+.section-header2{
+font-size: 2.5rem;
+font-weight: 500;
+margin-bottom: 2.5rem;
+
+}
+
+/* design for the progression of my gradient color in the progress bar .............................*/
+
+.designEach{
+    position: relative;
+    height: 1.2rem;
+    background-color: var(--helper-tint);
+    border-radius: 10px;
+    margin: 5px;
+    
+}
+
+.designEach::before{
+    content: "";
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--gradient);
+    border-radius: 10px;
+
+}
+
+.first::before{
+    width: 80%;
+    
+}
+.second::before{
+    width: 90%;
+    
+}
+
+.third::before{
+    width: 70%;
+    
+}
+
+.forth::before{
+    width: 65%;
+   
+}
+
+
+/* design for the marks in the progress bar .............................*/
+
+.biodata-design span{
+font-size: 1.4rem;
+background-color: var(--helper);
+color:var(--para-tint);
+height: 3rem;
+width: 5rem;
+top: 1.8rem;
+position: absolute;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.first span{
+
+left: 76%;
+
+}
+.second span{
+
+left: 86%;
+
+}
+
+.third span{
+
+left: 66%;
+
+}
+
+.forth span{
+
+left: 61%;
+
+}
+
+.designEach span::after{
+
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    border: 1.3rem solid var(--helper);
+    border-bottom-color: red;
+    border-color: transparent;
+    border-bottom-color: var(--helper);
+    top: -2rem;
+
+}
+
+
+
+
+
+.biodata-btn{
+    margin-top: 4rem;
+}
 
