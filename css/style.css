@@ -29,6 +29,22 @@
 
 }
 
+.grid-2-columns{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3-columns
+{
+    
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4-columns
+{
+    
+    grid-template-columns: repeat(4, 1fr);
+}
+
 html{
     font-size: 62.5%;
 }
@@ -74,8 +90,8 @@ li{
     align-items: center;
     justify-content: space-between;
     background-color: var(--bg);
-    height: 8vh;
-    padding: 0 10rem;
+    height: 15rem;
+    padding: 0px 26rem;
 }
 
 .header img{
@@ -116,6 +132,7 @@ li{
 
 main{
     background-color: var(--bg);
+    padding: 3rem;
 
 }
 .grid{
@@ -132,9 +149,9 @@ main{
  
 }
 .container{
-    max-width: 120rem;
+    max-width: 138rem;
     margin: 0 auto;
-    height: 60vh;
+    
 }
  
 .main-left{
@@ -186,8 +203,8 @@ main{
 .button:visited{
 
    background-image: var(--gradient);
-    font-size: 2rem;
-    padding: 1.4rem 3.2rem;
+    font-size: 1.7rem;
+    padding: 1rem 2rem;
     cursor: pointer;
     border: none;
     display: inline-block;
@@ -208,6 +225,30 @@ main{
 
 }
 
+
+.buttons{
+
+    background-image: var(--gradient);
+    font-size: 1.7rem;
+    padding: 1rem 2rem;
+    border: none;
+    color: var(--helper-tint);
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.buttons:hover,
+.buttons:active {
+
+    box-shadow: 0px 20px 20px 0px rgb(132 144 255/ 30%);
+
+}
+
+
 /* Biodata......................................................................................... */
 /* Biodata......................................................................................... */
 
@@ -223,10 +264,10 @@ main{
 
 .biodata{
 
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 9rem;
     max-width: 160rem;
-    margin: 9rem auto;
+    margin: 4rem auto;
 }
 
 
@@ -248,18 +289,18 @@ display: inline-block;
 }
 
 /* design for the header ............................*/
-.biodata-header{
+.common-header2{
     font-weight: 600;
-    font-size: 6rem;
-    padding: 3rem 0;
+    font-size: 5rem;
+    padding: 4rem 0;
     position: relative;
 }
 
 
 
-.biodata-header::before{
+.common-header2::before{
 content: ""; 
-/* it is very neccesary that give content */
+/* it is very neccesary that we give content */
 top: 12rem;
 left: 0;
 background: var(--helper);
@@ -270,9 +311,9 @@ position: absolute;
 
 }
 
-.biodata-header::after{
+.common-header2::after{
     content: ""; 
-    /* it is very neccesary that give content */
+    /* it is very neccesary that we give content */
     top: 13.1rem;
     left: 1rem;
     background: var(--helper);
@@ -284,10 +325,11 @@ position: absolute;
 /* design for the header end here............................*/
     
 
-.biodata-para{
+.common-para2{
     
     font-weight: 500;
-    margin: 5rem 0;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
     
 }
 
@@ -297,13 +339,13 @@ position: absolute;
     display: flex;
     /* justify-content: center; */
     flex-direction: column;
-    gap: 5rem;
-    padding: 6rem 0;
+    gap: 2rem;
+    padding: 3rem 0;
     
 }
 
 .section-header2{
-font-size: 2.5rem;
+font-size: 2.1rem;
 font-weight: 500;
 margin-bottom: 2.5rem;
 
@@ -316,7 +358,7 @@ margin-bottom: 2.5rem;
     height: 1.2rem;
     background-color: var(--helper-tint);
     border-radius: 10px;
-    margin: 5px;
+
     
 }
 
@@ -408,6 +450,198 @@ left: 61%;
 
 
 .biodata-btn{
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
+
+/* ...................Our Portfolio.............................. */
+
+
+.portfolio-section{
+
+    background-color: var(--bg);
+    padding-bottom: 6rem;
+}
+
+.portfolio-text p{
+    max-width: 60rem;
+}
+
+
+.p-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin: 5rem 0;
+
+}
+
+
+
+/* .................Portfolio Image transition...................... */
+.p-image{
+    display: grid;
+    gap: 2rem;
+}
+
+.p-eachImage img{
+    width: 100%;
+    border-radius: 7px;
+    position: relative;
+    overflow: hidden;
+}
+
+.p-eachImage {
+
+    position: relative;
+    overflow: hidden;
+
+}
+
+.p-eachImage .overlay{
+
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   background: var(--helper);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transform: translateY(100%);
+   border-radius: 7px;
+   opacity: 0;
+   transition: all 0.6s linear;
+}
+
+
+.p-eachImage:hover .overlay{
+    transform: translateY(0);
+    opacity: 0.7;
+
+}
+
+.overlay .common-header2{
+    color: white;
+    font-weight: 800;
+    text-decoration: none;
+   
+}
+
+/* for javascript */
+
+.p-btn-active{
+    transform: translateY(-1rem);
+}
+
+.p-eachImage-active{
+    display: none;
+}
+/* .................Portfolio Image transition end...................... */
+
+
+/* // .......................Counter section start........................... */
+
+
+.section-counter{
+
+    background-image: var(--gradient);
+    padding: 5rem;
+    text-align: center;
+    margin-bottom: 5rem;
+    
+}
+
+.counter-data{
+    display: grid;
+}
+
+.counter-data h2{
+
+    font-size: 4.5rem;
+    color: white;
+}
+
+.counter-data p{
+
+font-size: 2.2rem;
+color: white;
+}
+
+
+
+/* .............................Services Section.......................... */
+
+.service-heading p{
+    padding: 4rem 0;
+    max-width: 60rem;
+}
+
+.service-container
+{
+    display: grid;
+    gap: 9rem;
+    padding: 3rem 0;
+
+    
+}
+
+.service-icons{
+    display: inline-block;
+    background-color: #ffecff;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 56% 44% 70% 30% / 30% 54% 46% 70%;
+    padding: 14px;
+    position: relative;
+    animation: water-wave 3s linear infinite;
+}
+
+.service-icons::after{
+    content: "";
+    left: 0;
+    top:0;
+    height: 90%;
+    width: 90%;
+    border: 1.5px solid rgb(211, 69, 230);
+    
+    position: absolute;
+    animation: water-wave 3.5s linear infinite;
+}
+
+.services-offered{
+
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: #ebcaeb 0px 0px 5px 1px; 
+    padding: 6rem 4rem;
+    transition: all 0.4s linear;
+   
+
+}
+
+@keyframes water-wave {
+    0% {
+        border-radius: 56% 44% 70% 30% / 30% 54% 46% 70%;
+    }
+
+    50% {
+        border-radius: 3% 97% 15% 85% / 72% 0% 100% 28%;
+    }
+
+    100% {
+        border-radius: 56% 44% 70% 30% / 30% 54% 46% 70%;
+    }
+    
+}
+
+.services-offered h3{
+margin-top: 3rem;
+margin-bottom: 1rem;
+}
+.services-offered:hover{
+
+    transform: translateY(-3rem);
+}
