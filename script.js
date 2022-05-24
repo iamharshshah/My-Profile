@@ -1,4 +1,5 @@
 
+// .......................portfolio section start...........................
 
 const p_btn = document.querySelector(".p-btn");
 const p_btns = document.querySelectorAll(".p-btns");
@@ -46,3 +47,26 @@ image_active.forEach((currElem) => {
 
 
 });
+
+
+/* <!-- ......................Clients Testimonials................ --> */
+
+
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    // to autoplay..........
+    autoplay: {
+
+        delay: 2500,
+        disableOnInteraction: false,
+
+    },
+     //autoplay end..........
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+
+  // .......................Counter section start...........................

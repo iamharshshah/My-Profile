@@ -89,9 +89,8 @@ li{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--bg);
-    height: 15rem;
-    padding: 0px 26rem;
+    background-color: white;
+    padding: 2rem 26rem;
 }
 
 .header img{
@@ -132,7 +131,8 @@ li{
 
 main{
     background-color: var(--bg);
-    padding: 3rem;
+    padding: 5rem 0;
+
 
 }
 .grid{
@@ -142,7 +142,7 @@ main{
 
 
 .main-section{
-    margin: 10rem 0rem;
+    
     grid-template-columns: repeat(2, 1fr);
    
 
@@ -292,7 +292,7 @@ display: inline-block;
 .common-header2{
     font-weight: 600;
     font-size: 5rem;
-    padding: 4rem 0;
+    padding: 5rem 0;
     position: relative;
 }
 
@@ -645,3 +645,271 @@ margin-bottom: 1rem;
 
     transform: translateY(-3rem);
 }
+
+
+/* <!-- ......................Clients Testimonials................ --> */
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .testimonials{
+
+    margin: 3rem 0;
+  }
+
+  .testimonials h2{
+      margin-bottom: 6rem;
+  }
+
+  .client-message{
+    border: 0.4px solid #fde1fd;
+    box-shadow: #ebcaeb 0px 0px 5px 1px;
+    border-radius: 8px;
+    padding: 5rem 3rem;
+    position: relative;
+  }
+
+  .client-message::after{
+    position: absolute;
+    height: 0;
+    width: 0;
+    left: 2%;
+    top: 0;
+    /* put any font awesome icons as pseudo elements */
+    content: "\f10d";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: var(--helper-tint);
+    font-size: 5rem;
+  }
+
+  .client-message::before{
+    position: absolute;
+    height: 0;
+    width: 0;
+    right: 12%;
+    bottom: 28%;
+    /* put any font awesome icons as pseudo elements */
+    content: "\f10e";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: var(--helper-tint);
+    font-size: 5rem;
+  }
+
+  .client-image img{
+
+    width: 100px;
+    border-radius: 20rem;
+  }
+  .client-testimonials{
+      display: grid;
+
+margin-top: 5rem;
+  }
+
+
+  /* to put triangle after the message */
+  .client-testimonials::before{
+
+    content: "";
+    position: absolute;
+    border: 4rem solid white;
+    border-color: transparent;
+    border-top-color: rgb(245, 233, 245);
+    height: 0;
+    width: 0;
+    left: 40%;
+    bottom: 21.2%;
+  }
+
+  .client-name{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+  }
+
+ 
+/* <!-- Freelancing section start..................................... --> */
+
+.freelancing-section{
+
+margin-top: 6rem;
+padding: 7rem 0px;
+background: url(/images/3.png) no-repeat;
+background-size: 100%;
+background-attachment: fixed;
+text-align: center;
+position: relative;
+
+  }
+  
+
+
+.overlay{
+position: absolute;
+left: 0;
+top: 0;
+height: 100%;
+width: 100%;
+background-color: #bd8bfd;
+opacity: 0.7;
+
+  }
+
+  .freelancing-texts h2{
+
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    
+  }
+
+  .freelancing-texts{
+
+    position: relative;
+    color: white;
+  }
+  .freelancing-texts p{
+      color: white;
+      padding-bottom: 2rem;
+  }
+
+  .freelancing-texts span{
+
+    color: rgb(158, 250, 19);
+  }
+  
+
+  /* <!-- ..............contact us.................................. --> */
+
+  .form{
+
+    max-width: 70rem;
+    margin: 2rem auto;
+  }
+
+  .form input, .form textarea{ 
+
+    width: 100%;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    border: 1px solid var(--helper-tint);
+    box-shadow: #ebcaeb 0px 0px 0.5px 1px;
+  }
+
+  .form input[ type = "submit"]{
+      width: 30%;
+      border: none;
+  }
+
+
+.contact-section h2{
+    font-size: 5rem;
+}
+ .contactName{
+     display: grid;
+     gap: 1rem;
+ }
+
+ /* .................footer section................... */
+
+ .footer-section{
+margin-top: 5rem;
+background-color: rgb(6, 6, 43);
+padding: 4rem 3rem;
+color: white;
+ }
+
+ .footer{
+     display: grid;
+     gap: 7rem;
+ }
+
+ .footer-section p,  .footer-section a {
+
+    color: #bbbbbb;
+    padding: 1rem 0;
+ }
+
+ .footer-section a{
+    
+ }
+
+ .footer-texts p{
+     max-width: 30rem;
+ }
+
+ .footer-section a{
+
+    font-size: 1.5rem;
+ }
+
+ .footer-section h3{
+
+    margin-bottom: 2rem;
+ }
+
+ .footer-services li,  .footer-links li{
+
+    padding: 0.5rem 0;
+ }
+ .footer-links{
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+ }
+
+ .footer-links h3{
+     margin-left: -25px;
+ }
+
+/* ...........................footer icons.................................................. */
+
+ .footer-icons a{
+     font-size: 3rem;
+     
+ }
+
+
+ .icons{
+     display: grid;
+     margin: 3rem auto;
+     gap: 1rem;
+     max-width: 20rem;
+ }
+
+
+ /* ...........copyright.................... */
+ .copyright{
+     text-align: center;
+ }
