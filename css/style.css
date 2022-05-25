@@ -12,6 +12,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 :root{
     --heading: #b667dd;
     --para: #777;
@@ -47,6 +51,7 @@
 
 html{
     font-size: 62.5%;
+    overflow-x: hidden;
 }
 
 h1,h2,h3,h4,h5{
@@ -89,18 +94,19 @@ li{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: white;
-    padding: 2rem 26rem;
+    background-color: var(--bg);
+    padding: 2rem 10rem;
 }
 
 .header img{
-    height: 4rem;
+    width: 13%;
 }
 
 .navbar-lists{
 
     display: flex;
     gap: 4rem;
+
 }
 
 .navbar-link:link, 
@@ -124,6 +130,36 @@ li{
 
     
 }
+
+
+/* mobile navbar.................... */
+
+.mobile-navbar{
+
+    
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    display: none;
+    
+}
+
+.mobile-navbar-icon{
+    
+    font-size: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    width: 5rem;
+}
+
+.fa-xmark{
+    display: none;
+}
+ 
+
+
 
 /* -----------------------------------\\*Main//-------------------------------------------------------------------------------------------------- */
 /* -----------------------------------\\*Main//-------------------------------------------------------------------------------------------------- */
@@ -195,6 +231,7 @@ main{
     color: black;
     font-size: 7rem;
 }
+
 
 /* utility......................................................................................... */
 /* utility......................................................................................... */
@@ -681,11 +718,11 @@ margin-bottom: 1rem;
     height: 100%;
     object-fit: cover;
   }
-
+/* 
   .testimonials{
 
     margin: 3rem 0;
-  }
+  } */
 
   .testimonials h2{
       margin-bottom: 6rem;
@@ -815,7 +852,7 @@ opacity: 0.7;
   .form{
 
     max-width: 70rem;
-    margin: 2rem auto;
+    margin: 5rem auto;
   }
 
   .form input, .form textarea{ 
@@ -895,17 +932,27 @@ color: white;
 
 /* ...........................footer icons.................................................. */
 
- .footer-icons a{
-     font-size: 3rem;
-     
+
+
+ .footer-icons i{ 
+
+    background-color: #4f4f50;
+    font-size: 3rem;
+    border-radius: 56% 44% 70% 30% / 30% 54% 46% 70%;
+    padding: 10px;
+    animation: water-wave 3s linear infinite;
+    border: none;
+    display: inline-block;
+
  }
 
 
  .icons{
      display: grid;
      margin: 3rem auto;
-     gap: 1rem;
+     gap: 2rem;
      max-width: 20rem;
+     
  }
 
 
@@ -913,3 +960,277 @@ color: white;
  .copyright{
      text-align: center;
  }
+
+ /* ................scroller................. */
+
+ .scroller {
+
+    bottom: 5%;
+    right: 3%;
+    font-size: 3rem;
+    display: inline-block;
+    position: fixed;
+    color: white;
+    background-color: #bd8bfd;
+    border-radius: 56% 44% 70% 30% / 30% 54% 46% 70%;
+    padding: 1rem 2rem;
+    animation: water-wave 3s linear infinite;
+    cursor: pointer;
+    
+ }
+
+ /* ..........googlemap............... */
+
+.googlemap{
+    width: 100%;
+    margin: 2rem auto;
+}
+
+
+
+
+
+/* ...........................................................x......................................... */
+
+
+/* media query starts.......................... */
+
+/* -----------------------1400px----------------------- */
+@media only screen and (max-width: 1400px)
+{
+.main-left{
+
+    align-items: center;
+    text-align: center;
+}
+
+.main .grid{
+
+gap: 0;
+}
+
+.container{
+    max-width: 125rem;
+    padding: 0 3rem;
+}
+
+}
+
+/* -----------------------1400px finish----------------------- */
+
+
+
+/* 1200px............................................ */
+
+@media only screen and (max-width: 1200px)
+{
+
+    .service-heading p{
+        padding: 2rem 0;
+        max-width: 60rem;
+    }
+    
+    .service-container
+    {
+        display: grid;
+        gap: 2rem;
+        padding: 3rem 0;
+    
+        
+    }
+
+    .services-offered{
+
+        padding: 3rem 2rem;
+    }
+
+}
+
+/* 1166px............................................ */
+
+@media only screen and (max-width: 1166px)
+{
+    .client-testimonials::before{
+        bottom: 19.7%;
+    }
+
+    .footer{
+        gap: 0;
+    }
+
+    .common-para2 {
+
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+}
+
+
+/* 1000px for sandwitch icon............................................ */
+@media only screen and (max-width: 1000px)
+{
+    .navbar{
+        background: var(--gradient);
+        height: 100vh;
+        width: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+    display: flex;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: all 0.5s linear;
+
+    /* display none with animation..... */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 99;
+    }
+
+    .active .navbar {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+
+    }
+
+    .active .mobile-navbar .fa-bars{
+
+        display: none;
+    }
+
+    .active .mobile-navbar .fa-xmark{
+
+        display: block;
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .navbar ul{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+.navbar-lists .navbar-link:link,
+.navbar-lists .navbar-link:visited
+{
+color: black;
+font-size: 3rem;
+
+}
+
+.header{
+    position: relative;
+    
+}
+
+    .mobile-navbar{
+        display: block;
+        z-index: 9999;
+        border: 3px solid black;
+        color: black;
+    }
+
+    .header img{
+        width: 25%;
+    }
+}
+
+
+
+/* ...........943px for main section header tag1............. */
+
+@media only screen and (max-width: 943px)
+{
+   
+    
+    .main-bottom-para{
+        font-weight: 500;
+        margin: 2rem 0;
+        
+        
+    }
+    
+    .main-header{
+    
+        font-size: 5rem;
+    }
+.biodata{
+
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    max-width: 160rem;
+    margin: 3rem auto;
+}
+
+
+.biodata-image{
+box-shadow: -2rem -2rem var(--helper);
+display: inline-block;
+width: 100%;
+
+}
+
+.counter-data h2{
+
+    font-size: 3rem;
+   
+}
+
+.counter-data p{
+
+font-size: 1.3rem;
+color: white;
+}
+
+.section-counter {
+   
+    margin-bottom: 2rem;
+
+    
+}
+
+
+@media only screen and (max-width: 918px)
+{
+
+    .client-testimonials::before{
+        bottom: 18%;
+    }
+}
+
+@media only screen and (max-width: 860px)
+{
+
+    .client-testimonials::before{
+        bottom: 17%;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 750px)
+{
+    .header img{
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 550px)
+{
+    .header img{
+        width: 50%;
+    }
+
+    .header {
+
+        padding: 2rem 0rem;
+    }
+}

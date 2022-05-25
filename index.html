@@ -18,13 +18,18 @@
         <img src="/images/output-onlinetexttools.png" alt="Logo Image" class="nav-image">
         <nav class="navbar">
             <ul class="navbar-lists">
-                <li><a href="#" class="home-link navbar-link">Home</a></li>
-                <li><a href="#" class="about-link navbar-link">About</a></li>
-                <li><a href="#" class="services-link navbar-link">Services</a></li>
-                <li><a href="#" class="portfolio-link navbar-link">Portfolio</a></li>
-                <li><a href="#" class="contact-link navbar-link">Contact</a></li>
+                <li><a href="/index.html" target= "_blank" class="home-link navbar-link">Home</a></li>
+                <li><a href="/about.html" target= "_blank" class="about-link navbar-link">About</a></li>
+                <li><a href="/services.html" target= "_blank" class="services-link navbar-link">Services</a></li>
+                <li><a href="/porfolio.html" target= "_blank" class="portfolio-link navbar-link">Portfolio</a></li>
+                <li><a href="/contact.html" target= "_blank" class="contact-link navbar-link">Contact</a></li>
             </ul>
         </nav>
+
+        <div class="mobile-navbar">
+            <i class="fa-solid fa-bars mobile-navbar-icon" ></i>
+            <i class="fa-solid fa-xmark mobile-navbar-icon"></i>
+        </div>
         
             </header>
 
@@ -135,7 +140,9 @@
         <div class="grid-3-columns container p-image">
 
             <div class="p-eachImage p-btn1--1">
-        <img src="/images/4.jpg" alt="my images"> 
+
+                <!-- ...here we are using the less loading function.. -->
+        <img src="/images/10.jpg" data-src = "/images/4.jpg" alt="my images"> 
         <div class="overlay">
         
             <a href="http://127.0.0.1:5500/index.html" target= "_blank" class="common-header2">Project 1</a>
@@ -208,25 +215,25 @@
             <div class="container grid-4-columns counter-data">
 
                 <div>
-                    <h2 class="counter">5000+</h2>
+                    <h2 class="counter" data-number= "5000">0+</h2>
                     <p>Projects Completed</p>
                 </div>
 
                 
                 <div>
-                    <h2 class="counter">3000+</h2>
+                    <h2 class="counter" data-number= "3000">0+</h2>
                     <p>Happy Clients</p>
                 </div>
 
                 
                 <div>
-                    <h2 class="counter">12000+</h2>
+                    <h2 class="counter" data-number= "8000">0+</h2>
                     <p>Hours Worked</p>
                 </div>
 
                 
                 <div>
-                    <h2 class="counter">1500+</h2>
+                    <h2 class="counter" data-number= "7000">0+</h2>
                     <p>Websites Developed</p>
                 </div>
             </div>
@@ -235,9 +242,9 @@
 
         <!-- /* .............................Services Section.......................... */ -->
 
-        <section class="section service-section">
+        <section class="section service-section container">
 
-<div class="container service-heading">
+<div class=" service-heading">
 
 <h2 class="common-header2">
     Our Services
@@ -248,7 +255,7 @@
 
 
 
-<div class="grid-3-columns container service-container">
+<div class="grid-3-columns service-container">
     <div class="services-offered">
         <ion-icon name="desktop-sharp" class="service-icons"></ion-icon>
         <h3>Website Design</h3>
@@ -297,8 +304,8 @@
 
 
         <!-- ......................Clients Testimonials................ -->
-<section class="testimonials">
-<div class="container">
+<section class="testimonials container">
+<div class="testimonials-text">
     <h2 class="common-header2">Happy Clients</h2>
 </div>
 
@@ -463,7 +470,7 @@
         </section>
 
 
-        <!-- Freelancing section start..................................... -->
+<!-- Freelancing section start..................................... -->
 
 <section class="freelancing-section">
     <div class="overlay"></div>
@@ -483,23 +490,24 @@
 
 <!-- ..............contact us.................................. -->
 
-<section class="contact-section">
-<div class="common-header2 container">
+<section class="contact-section container">
+<div class="common-header2">
     <h2>Contact Us</h2>
 </div>
 
-<div class="form">
+<form action="https://formspree.io/f/mbjwwgke"
+method="POST" class="form">
 
     <div class="contactName grid-2-columns">
 <div>
         <label for="username"></label>
-        <input type="text" name="username" placeholder="Name" id="username">
+        <input type="text" name="username" placeholder="Name" id="username" autocomplete="off" required>
     </div>
 
 
 <div>
         <label for="email"></label>
-        <input type="text" name="email" placeholder="email" id="email">
+        <input type="email" name="email" placeholder="email" id="email" autocomplete="off" required>
     </div>
 
     
@@ -509,12 +517,12 @@
 
     <div>
 <label for="subject"></label>
-<input type="text" name="subject" placeholder="subject" id="subject">
+<input type="text" name="subject" placeholder="subject" id="subject" autocomplete="off" required min="5">
 </div>
 
 <div>
 <label for="textarea"></label>
-<textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="Share your message"></textarea>
+<textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="Share your message" autocomplete="off"></textarea>
 </div>
 
 <div>
@@ -524,7 +532,7 @@
 </div>
 
 
-</div>
+</form>
 
 </section>
 
@@ -638,7 +646,9 @@
 
 <!-- /* ...........................footer icons.................................................. */ -->
 
-<div class="container grid-3-columns icons">
+<div class="container">
+
+    <div class="icons grid-3-columns">
 
 <div class="footer-icons">
 <a href="#">
@@ -667,6 +677,7 @@
         
         </div>
 
+</div>
 </div>
 
 <!-- /* ...........copyright.................... */ -->

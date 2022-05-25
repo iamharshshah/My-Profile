@@ -69,4 +69,103 @@ var swiper = new Swiper(".mySwiper", {
     },
   });
 
+
+
+
+//   .............first page scrolling smooth......
+
+// the whole code means that I have a div and added a class inside it after the footer section
+
+const div_html = document.createElement("div");
+
+div_html.classList.add("scroller");
+
+const footer_section = document.querySelector(".footer-section");
+
+div_html.innerHTML = `<i class="fa-solid fa-arrow-up"></i>`;
+
+footer_section.after(div_html);
+
+// the whole code means that I have a div and added a class inside it after the footer section
+
+const header = document.querySelector(".header")
+
+
+const scroll_top = () => {
+
+    header.scrollIntoView({ behavior: 'smooth'});
+
+};
+
+div_html.addEventListener("click", scroll_top);
+
+//   .............first page scrolling smooth ends here......
+
+
+
   // .......................Counter section start...........................
+
+
+  const counter_data = document.querySelectorAll(".counter")
+
+  const speed = 200;
+
+  counter_data.forEach((element) => {
+
+    const updateNumber = () => {
+
+        let counter_number = parseInt(element.dataset.number);
+        // console.log(counter_number);
+        const initialNum = parseInt(element.innerText);
+        // console.log(initialNum);
+        const increment = Math.trunc(counter_number/speed);
+        
+        if(initialNum < counter_number){
+            element.innerText = `${initialNum + increment}+ `;
+            setTimeout(updateNumber, 10);
+        }
+
+        
+    }
+    updateNumber();
+
+
+  });
+
+
+//   -----------responsive navbar............
+
+
+const headerElem = document.querySelector(".header")
+const mobile_icon = document.querySelector(".mobile-navbar")
+
+
+mobile_icon.addEventListener("click", () => {
+
+  headerElem.classList.toggle("active");
+
+});
+
+
+// for loading image.....
+
+const imgRef = document.querySelector("img[data-src]");
+
+const lazyImg = (entries) => {
+
+    const [entry] = entries;
+    // we have only one data that's why using array destructuring, otherwise we would have used for each loop to change all the image we took reference of..
+
+    if(!entry.isIntersecting) return;
+    entry.target.src = imgRef.dataset.src;
+
+}
+
+const imgObserver = new IntersectionObserver(lazyImg, {
+
+root: null,
+threshold: 0,
+
+}) 
+
+imgObserver.observe(imgRef);
